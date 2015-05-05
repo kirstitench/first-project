@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/kirstitench/first-project",
   "dependencies": {
-    "zerver": "^0.15.23"
+    "zerver": "latest"
   },
   "devDependencies": {}
 }
