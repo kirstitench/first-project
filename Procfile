@@ -1,1 +1,1 @@
-web: zerver -p .
+web: zerver .
