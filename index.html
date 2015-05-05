@@ -23,7 +23,8 @@
      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
          <script>
             function myController($scope){
-                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg","img/17.jpg","img/18.jpg","img/19.jpg"];;
+                $scope.photo="img/1.jpg";
+                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/19.jpg"];;
                 $scope.photo=aPhotos[Math.floor(Math.random() * aPhotos.length)];
             }
     </script>
@@ -47,10 +48,11 @@
     <!--Second Page-->
     <div class="app-page page2-page" data-page="page2">
         <div class="app-topbar blue">
-            <div class="app-title"><a class="kik-button kik-black"></a>Photo Page</div>
+            <div class="app-button" id="center" data-back><div class="app-title"><a class="kik-button kik-black"></a>Page Two</div></div>
         </div>
-        <div  ng-contoller="myController" class="app-content">
-            <!--<img src="{{photo}}" height="100" width="100"/>--><br>
+        <div ng-contoller="myController" class="app-content">
+            <!--angular not workign<img src="{{photo}}" height="100" width="100"/><br>-->
+            <img src="img/19.jpg" height="100" width="100">
             <button class="changePhoto" ng-click="changePhoto()">Change Photo</button>
         </div>
     

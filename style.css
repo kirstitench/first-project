@@ -16,3 +16,7 @@ img{
      display: block;
     margin: auto;   
 }
+.app-button{
+    display:block !important;
+    margin: auto !important;
+}
