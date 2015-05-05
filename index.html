@@ -20,35 +20,56 @@
     <style>
         
     </style>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+         <script>
+            function myController($scope){
+                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/9.jpg","img/10.jpg","img/11.jpg","img/12.jpg","img/13.jpg","img/14.jpg","img/15.jpg","img/16.jpg","img/17.jpg","img/18.jpg","img/19.jpg"];;
+                $scope.photo=aPhotos[Math.floor(Math.random() * aPhotos.length)];
+            }
+    </script>
 </head>
 
-<body>
-   <!-- <div class="app-page home-page" data-page="home">
-        <div class="app-topbar red">
-            <div class="app-title">First Project</div>
+<body data-ng-app="">
+   <div class="app-page home-page" data-page="home">
+        <div class="app-topbar blue">
+            <div class="app-title"><a class="kik-button kik-black"></a>First Project</div>
         </div>
     <div class="app-content">
         <div class="app-section">
-        <div class="app-button" data-target="newPage">New Page</div>
+            <div id="right">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+            
+            
+        <div class="app-button" data-target="page2">New Page</div>
         </div>
     </div>
-    </div> -->
-    <div class="container">
+    </div>
+    
+    <!--Second Page-->
+    <div class="app-page page2-page" data-page="page2">
+        <div class="app-topbar blue">
+            <div class="app-title"><a class="kik-button kik-black"></a>Photo Page</div>
+        </div>
+        <div  ng-contoller="myController" class="app-content">
+            <!--<img src="{{photo}}" height="100" width="100"/>--><br>
+            <button class="changePhoto" ng-click="changePhoto()">Change Photo</button>
+        </div>
+    
+    
+    </div>
+  <!--  <div class="container">
         <h1>First Project</h1>
     <p>This is a project to test that I can remember how to git commit, add to horuku, etc.</p>
         
         
-    </div>
+    </div>-->
     
     
-
 
 
      <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
+        
         <script src="//cdn.kik.com/kik/1.0.22/kik.js"></script>
         <script src="//cdn.kik.com/app/3.0.1/app.min.js"></script>
-        <script src="/controller/home.js"></script>
-        <script src="/controller/page2.js"></script>
         <script src="/main.js"></script>
 
 </body>
