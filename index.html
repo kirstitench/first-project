@@ -22,15 +22,17 @@
     </style>
      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
          <script>
-            function myController($scope){
+            /*var myApp = angular.module('myApp',[]);
+
+myApp.controller('PhotoController', ['$scope', function($scope) {
                 $scope.photo="img/1.jpg";
-                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/19.jpg"];;
+                var aPhotos = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img6.jpg","img/7.jpg","img/8.jpg","img/19.jpg"];
                 $scope.photo=aPhotos[Math.floor(Math.random() * aPhotos.length)];
-            }
+            }*/
     </script>
 </head>
 
-<body data-ng-app="">
+<body data-ng-app="myApp">
    <div class="app-page home-page" data-page="home">
         <div class="app-topbar blue">
             <div class="app-title"><a class="kik-button kik-black"></a>First Project</div>
@@ -50,8 +52,8 @@
         <div class="app-topbar blue">
             <div class="app-button" id="center" data-back><div class="app-title"><a class="kik-button kik-black"></a>Page Two</div></div>
         </div>
-        <div ng-contoller="myController" class="app-content">
-            <!--angular not workign<img src="{{photo}}" height="100" width="100"/><br>-->
+        <div ng-contoller="PhotoController" class="app-content">
+            <!--<img src="{{photo}}" height="100" width="100"/><br>-->
             <img src="img/19.jpg" height="100" width="100">
             <br>
             <br>
